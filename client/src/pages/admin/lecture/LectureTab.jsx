@@ -21,7 +21,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { toast } from "sonner";
 
-const MEDIA_API = "http://localhost:8080/api/v1/media";
+const MEDIA_API = import.meta.env.VITE_MEDIA_API;
 
 const LectureTab = () => {
   const [lectureTitle, setLectureTitle] = useState("");
@@ -29,7 +29,7 @@ const LectureTab = () => {
   const [isFree, setIsFree] = useState(false);
   const [mediaProgress, setMediaProgress] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
-  const [btnDisable, setBtnDisable] = useState(true);
+  const [_, setBtnDisable] = useState(true);
   const params = useParams();
   const { courseId, lectureId } = params;
 

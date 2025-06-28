@@ -35,7 +35,7 @@ const CourseTab = () => {
   const updateInstructorProfile = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8080/api/v1/user/instructor/update-profile",
+        `${import.meta.env.VITE_BACKEND_URL}/user/instructor/update-profile`,
         {
           method: "PATCH",
           headers: {
