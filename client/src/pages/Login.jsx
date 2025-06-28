@@ -70,23 +70,14 @@ const Login = () => {
       toast.success(registerData.message || "Account created successfully");
     }
     if (registerError) {
-      const message =
-        registerError?.data?.message ||
-        registerError?.message ||
-        "Something went wrong";
-      toast.error(message);
+      toast.error(registerError.data.message || "Something went wrong");
     }
-
     if (loginIsSuccess && loginData) {
       toast.success(loginData.message || "Login successfully");
       navigate("/");
     }
     if (loginError) {
-      const message =
-        loginError?.data?.message ||
-        loginError?.message ||
-        "Login failed. Please try again";
-      toast.error(message);
+      toast.error(loginError.data.message || "Something went wrong");
     }
   }, [
     loginIsLoading,

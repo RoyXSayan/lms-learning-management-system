@@ -19,6 +19,9 @@ import CourseDetail from "./pages/student/CourseDetail";
 import BuyCourse from "./pages/student/BuyCourse";
 import CourseProgress from "./pages/student/CourseProgress";
 import SearchPage from "./pages/student/SearchPage";
+
+import CustomAppWrapper from "./CustomAppWrapper";
+
 import {
   AdminRoute,
   AuthenticatedUser,
@@ -33,7 +36,11 @@ import OwnerDashboard from "./pages/admin/OwnerDashboard";
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />,
+    element: (
+      <CustomAppWrapper>
+        <MainLayout />
+      </CustomAppWrapper>
+    ),
     children: [
       {
         path: "/",
