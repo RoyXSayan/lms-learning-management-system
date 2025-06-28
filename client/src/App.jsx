@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { Button } from "./components/ui/button";
-import Login from "./pages/login";
+import Login from "./pages/Login";
 import HeroSection from "./pages/student/HeroSection";
 import MainLayout from "./layout/MainLayout";
 import Courses from "./pages/student/Courses";
@@ -105,7 +105,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "payment-success/:courseId",
-        element: <PaymentSuccess />
+        element: <PaymentSuccess />,
       },
 
       //admin routes start from here
@@ -142,12 +142,12 @@ const appRouter = createBrowserRouter([
             element: <EditLecture />,
           },
           {
-            path:"owner-dashboard",
+            path: "owner-dashboard",
             element: (
               <OwnerRoute>
                 <OwnerDashboard />
               </OwnerRoute>
-            )
+            ),
           },
         ],
       },
