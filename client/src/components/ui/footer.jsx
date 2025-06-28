@@ -50,7 +50,7 @@ const Underline = `hover:-translate-y-1 border border-dotted rounded-xl p-2.5 tr
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 dark:bg-[#0a0a1a] text-gray-700 dark:text-gray-300 border-t border-gray-200 dark:border-gray-700">
+    <footer className=" bg-gray-100 dark:bg-[#0a0a1a] text-gray-700 dark:text-gray-300 border-t border-gray-200 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-6 pt-10 pb-6">
         {/* Logo & About */}
         <div className="flex flex-col items-center text-center gap-4 mb-10">
